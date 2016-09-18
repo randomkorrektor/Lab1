@@ -1,35 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Base>
- <Name xmlns="Bary">
-  <Function>SEO</Function>
-  <Lvl>5</Lvl>
-  <Leadership>32</Leadership>
-  <Programming>66</Programming>
-  <Responsibility>17</Responsibility>
-  <Diplomacy>22</Diplomacy>
- </Name>
  <Name xmlns="Alex">
-  <Function>Lid</Function>
-  <Lvl>2</Lvl>
-  <Leadership>45</Leadership>
-  <Programming>77</Programming>
-  <Responsibility>97</Responsibility>
-  <Diplomacy>70</Diplomacy>
+  <Function>Scrum master</Function>
+  <Lvl>6</Lvl>
+  <Leadership>47</Leadership>
+  <Programming>39</Programming>
+  <Responsibility>98</Responsibility>
+  <Diplomacy>12</Diplomacy>
  </Name>
  <Name xmlns="Max">
-  <Function>Team</Function>
-  <Lvl>3</Lvl>
-  <Leadership>22</Leadership>
-  <Programming>16</Programming>
-  <Responsibility>51</Responsibility>
-  <Diplomacy>81</Diplomacy>
- </Name>
- <Name xmlns="Inna">
-  <Function>SM</Function>
+  <Function>Scrum master</Function>
   <Lvl>1</Lvl>
-  <Leadership>57</Leadership>
-  <Programming>57</Programming>
-  <Responsibility>9</Responsibility>
-  <Diplomacy>70</Diplomacy>
+  <Leadership>9</Leadership>
+  <Programming>11</Programming>
+  <Responsibility>48</Responsibility>
+  <Diplomacy>95</Diplomacy>
+ </Name>
+ <Name xmlns="Sam">
+  <Function>Team</Function>
+  <Lvl>2</Lvl>
+  <Leadership>52</Leadership>
+  <Programming>83</Programming>
+  <Responsibility>20</Responsibility>
+  <Diplomacy>89</Diplomacy>
+ </Name>
+ <Name xmlns="Jax">
+  <Function>Team</Function>
+  <Lvl>2</Lvl>
+  <Leadership>59</Leadership>
+  <Programming>30</Programming>
+  <Responsibility>92</Responsibility>
+  <Diplomacy>53</Diplomacy>
+ </Name>
+ <Name xmlns="Anna">
+  <Function>Product owner</Function>
+  <Lvl>1</Lvl>
+  <Leadership>90</Leadership>
+  <Programming>32</Programming>
+  <Responsibility>25</Responsibility>
+  <Diplomacy>11</Diplomacy>
+ </Name>
+ <Name xmlns="Dan">
+  <Function>Scrum master</Function>
+  <Lvl>2</Lvl>
+  <Leadership>29</Leadership>
+  <Programming>72</Programming>
+  <Responsibility>39</Responsibility>
+  <Diplomacy>100</Diplomacy>
  </Name>
 </Base>

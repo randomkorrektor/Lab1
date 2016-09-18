@@ -47,6 +47,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAF.Designer.cs">
+      <DependentUpon>FormAF.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAF.resx">
+      <DependentUpon>FormAF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuestion.resx">
       <DependentUpon>FormQuestion.cs</DependentUpon>
     </EmbeddedResource>

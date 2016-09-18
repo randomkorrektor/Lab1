@@ -53,6 +53,11 @@ namespace WindowsFormsApplication1
             this._programming += prog;
             this._diplomacy += des;
         }
+
+        public void AlterFunc(string func)
+        {
+            this._function = func;
+        }
         
         public string GetData()
         {

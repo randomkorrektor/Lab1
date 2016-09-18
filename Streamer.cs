@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     class Streamer
     {
-        public void ReadFile(List<Student> students)
+        public static void ReadFile(List<Student> students)
         {
 
             XmlWriterSettings sett = new XmlWriterSettings();
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
             output.Close();
         }
 
-        public void WriteFile(List<Student> students)
+        public static void WriteFile(List<Student> students)
         {
             XmlDocument Doc = new XmlDocument();
             Doc.Load("Base.xml");

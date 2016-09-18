@@ -15,7 +15,6 @@ namespace WindowsFormsApplication1
     {
         
         private List<Student> staff = new List<Student>();
-        private Streamer stream1 = new Streamer();
 
         public FormBase()
         {
@@ -58,14 +57,18 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            staff.RemoveAt(listBox1.SelectedIndex);
-            listBox1.Items.Clear();
-            for (int i = 0; i < staff.Count; i++)
+            if (listBox1.SelectedIndex != -1)
             {
-                listBox1.Items.Add(staff[i].name);
+                staff.RemoveAt(listBox1.SelectedIndex);
+                listBox1.Items.Clear();
+                for (int i = 0; i < staff.Count; i++)
+                {
+                    listBox1.Items.Add(staff[i].name);
+                }
+                listBox1.Refresh();
+                richTextBox1.Clear();
             }
-            listBox1.Refresh();
-            richTextBox1.Clear();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -75,7 +78,7 @@ namespace WindowsFormsApplication1
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            stream1.ReadFile(staff);
+            Streamer.ReadFile(staff);
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)
@@ -90,7 +93,7 @@ namespace WindowsFormsApplication1
                     case 1:
                         staff.Clear();
                         listBox1.Items.Clear();
-                        stream1.WriteFile(staff);
+                        Streamer.WriteFile(staff);
                         for (int i = 0; i < staff.Count; i++)
                         {
                             listBox1.Items.Add(staff[i].name);
@@ -100,7 +103,7 @@ namespace WindowsFormsApplication1
                         break;
                     case 2:
                         listBox1.Items.Clear();
-                        stream1.WriteFile(staff);
+                        Streamer.WriteFile(staff);
                         for (int i = 0; i < staff.Count; i++)
                         {
                             listBox1.Items.Add(staff[i].name);
@@ -113,7 +116,25 @@ namespace WindowsFormsApplication1
                 }
             }
             else
-                stream1.WriteFile(staff);
+            {
+                Streamer.WriteFile(staff);
+                for (int i = 0; i < staff.Count; i++)
+                {
+                    listBox1.Items.Add(staff[i].name);
+                }
+                listBox1.Refresh();
+            }   
+        }
+
+        private void buttonAppoint_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                var af = new FormAF();
+                af.ShowDialog();
+                staff[listBox1.SelectedIndex].AlterFunc(af.function);
+            }
+            richTextBox1.Clear();
         }
     }
 

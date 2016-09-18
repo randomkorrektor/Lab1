@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class FormInitialization : Form
+    public partial class FormAF : Form
     {
-        public string name, function;
-        public FormInitialization()
+        public string function;
+        public FormAF()
         {
             InitializeComponent();
             comboBox1.Items.AddRange(new string[] { "Product owner", "Scrum master", "Team" });
@@ -21,21 +21,20 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && comboBox1.Text != "")
+            if (comboBox1.Text != "")
             {
-                name = textBox1.Text;
                 function = comboBox1.Text;
-                this.Close(); 
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Enter the name and function");
+                MessageBox.Show("Select function");
             }
         }
 
-        private void FormInitialization_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
