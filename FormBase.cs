@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         
         private List<Student> staff = new List<Student>();
+        private Streamer stream1 = new Streamer();
 
         public FormBase()
         {
@@ -70,6 +71,49 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            stream1.ReadFile(staff);
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            if (staff.Count > 0)
+            {
+                string mess = "This database includes employees. Clear base?";
+                var warning = new FormQuestion(mess);
+                warning.ShowDialog();
+                switch (warning.reqest)
+                {
+                    case 1:
+                        staff.Clear();
+                        listBox1.Items.Clear();
+                        stream1.WriteFile(staff);
+                        for (int i = 0; i < staff.Count; i++)
+                        {
+                            listBox1.Items.Add(staff[i].name);
+                        }
+                        listBox1.Refresh();
+                        richTextBox1.Clear();
+                        break;
+                    case 2:
+                        listBox1.Items.Clear();
+                        stream1.WriteFile(staff);
+                        for (int i = 0; i < staff.Count; i++)
+                        {
+                            listBox1.Items.Add(staff[i].name);
+                        }
+                        listBox1.Refresh();
+                        richTextBox1.Clear();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+                stream1.WriteFile(staff);
         }
     }
 

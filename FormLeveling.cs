@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
     {
         Student student = new Student();
         protected int freePoints = 5;
-        public int lead=0,resp=0,prog=0,des=0;
+        public int lead=0,resp=0,prog=0,dip=0;
 
 
         public FormLeveling(Student stud)
@@ -36,12 +36,12 @@ namespace WindowsFormsApplication1
             labelLeadership.Text = "Leadership: "+(student.leadership+lead);
             labelResponsibility.Text = "Responsibility: "+(student.responsibility+resp);
             labelProgramming.Text = "Programming: "+(student.programming+prog);
-            labelDesigne.Text = "Designe: "+(student.designe+des);
+            labelDiplomacy.Text = "Designe: "+(student.diplomacy+dip);
             labelPoints.Text = "Free points: "+freePoints;
             labelLid.Text = lead.ToString();
             labelProg.Text = prog.ToString();
             labelResp.Text = resp.ToString();
-            labelDes.Text = des.ToString();
+            labelDes.Text = dip.ToString();
 
         }
 
@@ -103,13 +103,13 @@ namespace WindowsFormsApplication1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            des = ButDown(student.designe, des);
+            dip = ButDown(student.diplomacy, dip);
             RefreshAll();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            des = ButUp(student.designe, des);
+            dip = ButUp(student.diplomacy, dip);
             RefreshAll();
         }
 
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("You have " + freePoints.ToString() + " free points!");
             else
             {
-                student.LvlUp(lead, resp, prog, des);
+                student.LvlUp(lead, resp, prog, dip);
                 this.Close();
             }
         }

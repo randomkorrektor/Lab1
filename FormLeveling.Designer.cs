@@ -34,7 +34,7 @@
             this.labelLeadership = new System.Windows.Forms.Label();
             this.labelResponsibility = new System.Windows.Forms.Label();
             this.labelProgramming = new System.Windows.Forms.Label();
-            this.labelDesigne = new System.Windows.Forms.Label();
+            this.labelDiplomacy = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -124,17 +124,17 @@
             this.labelProgramming.TabIndex = 5;
             this.labelProgramming.Text = "Programming: ";
             // 
-            // labelDesigne
+            // labelDiplomacy
             // 
-            this.labelDesigne.AutoSize = true;
-            this.labelDesigne.BackColor = System.Drawing.Color.White;
-            this.labelDesigne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelDesigne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDesigne.Location = new System.Drawing.Point(23, 195);
-            this.labelDesigne.Name = "labelDesigne";
-            this.labelDesigne.Size = new System.Drawing.Size(67, 18);
-            this.labelDesigne.TabIndex = 6;
-            this.labelDesigne.Text = "Designe: ";
+            this.labelDiplomacy.AutoSize = true;
+            this.labelDiplomacy.BackColor = System.Drawing.Color.White;
+            this.labelDiplomacy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelDiplomacy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDiplomacy.Location = new System.Drawing.Point(23, 195);
+            this.labelDiplomacy.Name = "labelDiplomacy";
+            this.labelDiplomacy.Size = new System.Drawing.Size(81, 18);
+            this.labelDiplomacy.TabIndex = 6;
+            this.labelDiplomacy.Text = "Diplomacy: ";
             // 
             // button1
             // 
@@ -325,7 +325,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.labelDesigne);
+            this.Controls.Add(this.labelDiplomacy);
             this.Controls.Add(this.labelProgramming);
             this.Controls.Add(this.labelResponsibility);
             this.Controls.Add(this.labelLeadership);
@@ -348,7 +348,7 @@
         private System.Windows.Forms.Label labelLeadership;
         private System.Windows.Forms.Label labelResponsibility;
         private System.Windows.Forms.Label labelProgramming;
-        private System.Windows.Forms.Label labelDesigne;
+        private System.Windows.Forms.Label labelDiplomacy;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Base>
+ <Name xmlns="Bary">
+  <Function>SEO</Function>
+  <Lvl>5</Lvl>
+  <Leadership>32</Leadership>
+  <Programming>66</Programming>
+  <Responsibility>17</Responsibility>
+  <Diplomacy>22</Diplomacy>
+ </Name>
+ <Name xmlns="Alex">
+  <Function>Lid</Function>
+  <Lvl>2</Lvl>
+  <Leadership>45</Leadership>
+  <Programming>77</Programming>
+  <Responsibility>97</Responsibility>
+  <Diplomacy>70</Diplomacy>
+ </Name>
+ <Name xmlns="Max">
+  <Function>Team</Function>
+  <Lvl>3</Lvl>
+  <Leadership>22</Leadership>
+  <Programming>16</Programming>
+  <Responsibility>51</Responsibility>
+  <Diplomacy>81</Diplomacy>
+ </Name>
+ <Name xmlns="Inna">
+  <Function>SM</Function>
+  <Lvl>1</Lvl>
+  <Leadership>57</Leadership>
+  <Programming>57</Programming>
+  <Responsibility>9</Responsibility>
+  <Diplomacy>70</Diplomacy>
+ </Name>
+</Base>
