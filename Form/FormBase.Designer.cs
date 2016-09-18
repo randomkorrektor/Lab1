@@ -41,10 +41,10 @@
             this.buttonAppoint = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTeam = new System.Windows.Forms.ComboBox();
+            this.comboBoxPO = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSM = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,21 +181,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Team";
             // 
-            // comboBox1
+            // comboBoxTeam
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 267);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
+            this.comboBoxTeam.FormattingEnabled = true;
+            this.comboBoxTeam.Location = new System.Drawing.Point(23, 267);
+            this.comboBoxTeam.Name = "comboBoxTeam";
+            this.comboBoxTeam.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTeam.TabIndex = 15;
             // 
-            // comboBox2
+            // comboBoxPO
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(23, 318);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 17;
+            this.comboBoxPO.FormattingEnabled = true;
+            this.comboBoxPO.Location = new System.Drawing.Point(23, 318);
+            this.comboBoxPO.Name = "comboBoxPO";
+            this.comboBoxPO.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPO.TabIndex = 17;
             // 
             // label4
             // 
@@ -208,13 +208,13 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Product owner";
             // 
-            // comboBox3
+            // comboBoxSM
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(23, 368);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 19;
+            this.comboBoxSM.FormattingEnabled = true;
+            this.comboBoxSM.Location = new System.Drawing.Point(23, 368);
+            this.comboBoxSM.Name = "comboBoxSM";
+            this.comboBoxSM.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSM.TabIndex = 19;
             // 
             // label5
             // 
@@ -243,11 +243,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(456, 418);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBoxSM);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxPO);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTeam);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonAppoint);
             this.Controls.Add(this.label3);
@@ -287,10 +287,10 @@
         private System.Windows.Forms.Button buttonAppoint;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxTeam;
+        private System.Windows.Forms.ComboBox comboBoxPO;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxSM;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

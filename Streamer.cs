@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     class Streamer
     {
-        public static void ReadFile(List<Student> students)
+        public static void ReadFile(List<Employee> students)
         {
 
             XmlWriterSettings sett = new XmlWriterSettings();
@@ -41,38 +41,32 @@ namespace WindowsFormsApplication1
             output.Close();
         }
 
-        public static void WriteFile(List<Student> students)
+        public static void WriteFile(EmployeesBase BaseEmp)
         {
             XmlDocument Doc = new XmlDocument();
             Doc.Load("Base.xml");
             
-            /*foreach (XmlNode student in Doc.GetElementsByTagName("Name"))
-            {
-                if (student.Attributes["xmlns"] == null)
-                    continue;*/
-
             foreach (XmlNode student in Doc.DocumentElement)
             {
-                Student stud = new Student();
-                stud.ReadStudent(student.Attributes[0].Value, student["Function"].InnerText, int.Parse(student["Lvl"].InnerText),
+                Employee stud = new Employee();
+                stud.writeStudent(student.Attributes[0].Value, student["Function"].InnerText, int.Parse(student["Lvl"].InnerText),
                     int.Parse(student["Leadership"].InnerText), int.Parse(student["Programming"].InnerText), int.Parse(student["Responsibility"].InnerText),
                     int.Parse(student["Diplomacy"].InnerText));
-                students.Add(stud);
-                    
-
-                /*foreach (XmlNode student in Doc.DocumentElement.ChildNodes)
-                Point[] pointsarray = new Point[student.ChildNodes.Count / 2];
-                VectorOfPoint vectforread = new VectorOfPoint();
-                int s = 0;
-                for (int i = 0; i < student.ChildNodes.Count - 1; i += 2)
+                BaseEmp.staff.Add(stud);
+                switch (student["Function"].InnerText)
                 {
-                    pointsarray[s].X = Convert.ToInt32(student.ChildNodes.Item(i).InnerText);
-                    pointsarray[s].Y = Convert.ToInt32(student.ChildNodes.Item(i + 1).InnerText);
-                    s++;
+                    case "Product owner":
+                        BaseEmp.ListPO.Add(stud);
+                        break;
+                    case "Scrum master":
+                        BaseEmp.ListSM.Add(stud);
+                        break;
+                    case "Team":
+                        BaseEmp.ListTeams.Add(stud);
+                        break;
+                    default:
+                        break;
                 }
-                vectforread.Push(pointsarray);
-                Alphabet.Add(new Letter(student.NamespaceURI, vectforread));
-                 */
             }
             
         }

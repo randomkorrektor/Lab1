@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    public class Student
+    public class Employee
     {
         protected string _name, _function;
         public string name  { get { return _name; } }
@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             this._diplomacy = rand.Next(1, 101);
         }
 
-        public void ReadStudent(string name, string function, int lvl, int lid,
+        public void writeStudent(string name, string function, int lvl, int lid,
             int prog, int resp, int dip)
         {
 

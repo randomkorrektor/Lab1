@@ -47,53 +47,56 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAF.cs">
+    <Compile Include="Models\EmployeesBase.cs" />
+    <Compile Include="Form\FormAF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAF.Designer.cs">
+    <Compile Include="Form\FormAF.Designer.cs">
       <DependentUpon>FormAF.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuestion.cs">
+    <Compile Include="Form\FormQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuestion.Designer.cs">
+    <Compile Include="Form\FormQuestion.Designer.cs">
       <DependentUpon>FormQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLeveling.cs">
+    <Compile Include="Form\FormLeveling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLeveling.Designer.cs">
+    <Compile Include="Form\FormLeveling.Designer.cs">
       <DependentUpon>FormLeveling.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\TaskList.cs" />
     <Compile Include="Streamer.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="FormBase.cs">
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Form\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBase.Designer.cs">
+    <Compile Include="Form\FormBase.Designer.cs">
       <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInitialization.cs">
+    <Compile Include="Form\FormInitialization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInitialization.Designer.cs">
+    <Compile Include="Form\FormInitialization.Designer.cs">
       <DependentUpon>FormInitialization.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAF.resx">
+    <EmbeddedResource Include="Form\FormAF.resx">
       <DependentUpon>FormAF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuestion.resx">
+    <EmbeddedResource Include="Form\FormQuestion.resx">
       <DependentUpon>FormQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBase.resx">
+    <EmbeddedResource Include="Form\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInitialization.resx">
+    <EmbeddedResource Include="Form\FormInitialization.resx">
       <DependentUpon>FormInitialization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLeveling.resx">
+    <EmbeddedResource Include="Form\FormLeveling.resx">
       <DependentUpon>FormLeveling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

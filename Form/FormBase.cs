@@ -13,8 +13,7 @@ namespace WindowsFormsApplication1
 
     public partial class FormBase : Form
     {
-        
-        private List<Student> staff = new List<Student>();
+        private EmployeesBase EmpBase = new EmployeesBase();
 
         public FormBase()
         {
@@ -28,7 +27,34 @@ namespace WindowsFormsApplication1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text = staff[listBox1.SelectedIndex].GetData();
+            richTextBox1.Text = EmpBase.staff[listBox1.SelectedIndex].GetData();
+        }
+
+        private void RefrashAll()
+        {
+            listBox1.Items.Clear();
+            for (int i = 0; i < EmpBase.staff.Count; i++)
+            {
+                listBox1.Items.Add(EmpBase.staff[i].name);
+            }
+            listBox1.Refresh();
+            richTextBox1.Clear();
+            comboBoxPO.Items.Clear();
+            comboBoxSM.Items.Clear();
+            comboBoxTeam.Items.Clear();
+            for (int i = 0; i < EmpBase.ListPO.Count; i++)
+            {
+                comboBoxPO.Items.Add(EmpBase.ListPO[i].name);
+            }
+            for (int i = 0; i < EmpBase.ListSM.Count; i++)
+            {
+                comboBoxSM.Items.Add(EmpBase.ListSM[i].name);
+            }
+            for (int i = 0; i < EmpBase.ListTeams.Count; i++)
+            {
+                comboBoxTeam.Items.Add(EmpBase.ListTeams[i].name);
+            }
+            comboBoxSM.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,9 +63,9 @@ namespace WindowsFormsApplication1
             Init.ShowDialog();
             if (Init.name != null && Init.function != null)
             {
-                staff.Add(new Student());
-                staff[staff.Count - 1].InitStudent(Init.name, Init.function);
-                listBox1.Items.Add(staff[staff.Count - 1].name);
+                EmpBase.AddEmployee(Init.name, Init.function);
+                listBox1.Items.Add(Init.name);
+                RefrashAll();
             }
         }
 
@@ -47,11 +73,9 @@ namespace WindowsFormsApplication1
         {
             if (listBox1.SelectedIndex != -1)
             {
-                var lev = new FormLeveling(staff[listBox1.SelectedIndex]);
+                FormLeveling lev = new FormLeveling(EmpBase.staff[listBox1.SelectedIndex]);
                 lev.ShowDialog();
-
-
-                richTextBox1.Text = staff[listBox1.SelectedIndex].GetData();
+                richTextBox1.Text = EmpBase.staff[listBox1.SelectedIndex].GetData();
             }
         }
 
@@ -59,14 +83,8 @@ namespace WindowsFormsApplication1
         {
             if (listBox1.SelectedIndex != -1)
             {
-                staff.RemoveAt(listBox1.SelectedIndex);
-                listBox1.Items.Clear();
-                for (int i = 0; i < staff.Count; i++)
-                {
-                    listBox1.Items.Add(staff[i].name);
-                }
-                listBox1.Refresh();
-                richTextBox1.Clear();
+                EmpBase.DelEmployee(listBox1.SelectedIndex);
+                RefrashAll();
             }
             
         }
@@ -78,12 +96,12 @@ namespace WindowsFormsApplication1
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Streamer.ReadFile(staff);
+            Streamer.ReadFile(EmpBase.staff);
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)
         {
-            if (staff.Count > 0)
+            if (EmpBase.staff.Count > 0)
             {
                 string mess = "This database includes employees. Clear base?";
                 var warning = new FormQuestion(mess);
@@ -91,25 +109,13 @@ namespace WindowsFormsApplication1
                 switch (warning.reqest)
                 {
                     case 1:
-                        staff.Clear();
+                        EmpBase.staff.Clear();
                         listBox1.Items.Clear();
-                        Streamer.WriteFile(staff);
-                        for (int i = 0; i < staff.Count; i++)
-                        {
-                            listBox1.Items.Add(staff[i].name);
-                        }
-                        listBox1.Refresh();
-                        richTextBox1.Clear();
+                        Streamer.WriteFile(EmpBase);
                         break;
                     case 2:
                         listBox1.Items.Clear();
-                        Streamer.WriteFile(staff);
-                        for (int i = 0; i < staff.Count; i++)
-                        {
-                            listBox1.Items.Add(staff[i].name);
-                        }
-                        listBox1.Refresh();
-                        richTextBox1.Clear();
+                        Streamer.WriteFile(EmpBase);
                         break;
                     default:
                         break;
@@ -117,13 +123,10 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                Streamer.WriteFile(staff);
-                for (int i = 0; i < staff.Count; i++)
-                {
-                    listBox1.Items.Add(staff[i].name);
-                }
-                listBox1.Refresh();
-            }   
+                Streamer.WriteFile(EmpBase);
+                
+            }
+            RefrashAll();
         }
 
         private void buttonAppoint_Click(object sender, EventArgs e)
@@ -132,7 +135,7 @@ namespace WindowsFormsApplication1
             {
                 var af = new FormAF();
                 af.ShowDialog();
-                staff[listBox1.SelectedIndex].AlterFunc(af.function);
+                EmpBase.staff[listBox1.SelectedIndex].AlterFunc(af.function);
             }
             richTextBox1.Clear();
         }

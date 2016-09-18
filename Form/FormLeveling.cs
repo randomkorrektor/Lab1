@@ -12,12 +12,12 @@ namespace WindowsFormsApplication1
 {
     public partial class FormLeveling : Form
     {
-        Student student = new Student();
+        Employee student = new Employee();
         protected int freePoints = 5;
         public int lead=0,resp=0,prog=0,dip=0;
 
 
-        public FormLeveling(Student stud)
+        public FormLeveling(Employee stud)
         {
             InitializeComponent();
             student = stud;
