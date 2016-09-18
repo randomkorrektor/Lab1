@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
         public string GetData()
         {
             return ("Name: " + this.name + "\n" + "Function: " + this.function + "\n" + "Lvl: " + this.lvl + "\n" + "Leadership: " + this.leadership +
-                "\n" + "Responsibility: " + this.responsibility + "\n" + "Programming: " + this.programming + "\n" + "Designe: " + this.diplomacy);
+                "\n" + "Responsibility: " + this.responsibility + "\n" + "Programming: " + this.programming + "\n" + "Diplomacy: " + this.diplomacy);
         }
     }
 }

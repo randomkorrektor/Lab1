@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class FormBase
+    partial class FormFace
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -47,6 +47,9 @@
             this.comboBoxSM = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.buttonStaffIn = new System.Windows.Forms.Button();
+            this.listBoxStaff = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -188,6 +191,7 @@
             this.comboBoxTeam.Name = "comboBoxTeam";
             this.comboBoxTeam.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTeam.TabIndex = 15;
+            this.comboBoxTeam.SelectedIndexChanged += new System.EventHandler(this.comboBoxTeam_SelectedIndexChanged);
             // 
             // comboBoxPO
             // 
@@ -196,6 +200,7 @@
             this.comboBoxPO.Name = "comboBoxPO";
             this.comboBoxPO.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPO.TabIndex = 17;
+            this.comboBoxPO.SelectedIndexChanged += new System.EventHandler(this.comboBoxPO_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -215,6 +220,7 @@
             this.comboBoxSM.Name = "comboBoxSM";
             this.comboBoxSM.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSM.TabIndex = 19;
+            this.comboBoxSM.SelectedIndexChanged += new System.EventHandler(this.comboBoxSM_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -233,9 +239,38 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(12, 236);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(160, 170);
+            this.pictureBox2.Size = new System.Drawing.Size(250, 170);
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
+            // 
+            // buttonStaffIn
+            // 
+            this.buttonStaffIn.Location = new System.Drawing.Point(161, 367);
+            this.buttonStaffIn.Name = "buttonStaffIn";
+            this.buttonStaffIn.Size = new System.Drawing.Size(92, 21);
+            this.buttonStaffIn.TabIndex = 21;
+            this.buttonStaffIn.Text = "Build a staff";
+            this.buttonStaffIn.UseVisualStyleBackColor = true;
+            this.buttonStaffIn.Click += new System.EventHandler(this.buttonStaffIn_Click);
+            // 
+            // listBoxStaff
+            // 
+            this.listBoxStaff.FormattingEnabled = true;
+            this.listBoxStaff.Location = new System.Drawing.Point(161, 267);
+            this.listBoxStaff.Name = "listBoxStaff";
+            this.listBoxStaff.Size = new System.Drawing.Size(92, 95);
+            this.listBoxStaff.TabIndex = 22;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.AliceBlue;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(158, 248);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 16);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Staff";
             // 
             // FormBase
             // 
@@ -243,6 +278,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(456, 418);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.listBoxStaff);
+            this.Controls.Add(this.buttonStaffIn);
             this.Controls.Add(this.comboBoxSM);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxPO);
@@ -293,6 +331,9 @@
         private System.Windows.Forms.ComboBox comboBoxSM;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonStaffIn;
+        private System.Windows.Forms.ListBox listBoxStaff;
+        private System.Windows.Forms.Label label6;
     }
 }
 

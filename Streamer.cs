@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
                 stud.writeStudent(student.Attributes[0].Value, student["Function"].InnerText, int.Parse(student["Lvl"].InnerText),
                     int.Parse(student["Leadership"].InnerText), int.Parse(student["Programming"].InnerText), int.Parse(student["Responsibility"].InnerText),
                     int.Parse(student["Diplomacy"].InnerText));
-                BaseEmp.staff.Add(stud);
+                BaseEmp.employees.Add(stud);
                 switch (student["Function"].InnerText)
                 {
                     case "Product owner":

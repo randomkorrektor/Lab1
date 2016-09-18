@@ -9,25 +9,27 @@ namespace WindowsFormsApplication1
     
     class EmployeesBase
     {
-        public List<Employee> staff = new List<Employee>();
+        public List<Employee> employees = new List<Employee>();
         public List<Employee> ListPO = new List<Employee>();
         public List<Employee> ListTeams = new List<Employee>();
         public List<Employee> ListSM = new List<Employee>();
+        public List<Employee> staff = new List<Employee>();
+
 
         public void AddEmployee(string name, string function)
         {
-            staff.Add(new Employee());
-            staff[staff.Count-1].InitStudent(name, function);
+            employees.Add(new Employee());
+            employees[employees.Count-1].InitStudent(name, function);
             switch (function)
                 {
                     case "Product owner":
-                        ListPO.Add(staff[staff.Count - 1]);
+                        ListPO.Add(employees[employees.Count - 1]);
                         break;
                     case "Scrum master":
-                        ListSM.Add(staff[staff.Count - 1]);
+                        ListSM.Add(employees[employees.Count - 1]);
                         break;
                     case "Team":
-                        ListTeams.Add(staff[staff.Count - 1]);
+                        ListTeams.Add(employees[employees.Count - 1]);
                         break;
                     default:
                         break;
@@ -36,8 +38,8 @@ namespace WindowsFormsApplication1
 
         public void DelEmployee(int index)
         {
-            var obj = staff[index];
-            staff.Remove(obj);
+            var obj = employees[index];
+            employees.Remove(obj);
             switch (obj.function)
             {
                 case "Product owner":
@@ -54,5 +56,47 @@ namespace WindowsFormsApplication1
             }
         }
 
+        public void AlterFuncEmployee(int index, string func)
+        {
+            var obj = employees[index];
+            switch (obj.function)
+            {
+                case "Product owner":
+                    ListPO.Remove(obj);
+                    break;
+                case "Scrum master":
+                    ListSM.Remove(obj);
+                    break;
+                case "Team":
+                    ListTeams.Remove(obj);
+                    break;
+                default:
+                    break;
+            }
+            obj.AlterFunc(func);
+            switch (func)
+            {
+                case "Product owner":
+                    ListPO.Add(obj);
+                    break;
+                case "Scrum master":
+                    ListSM.Add(obj);
+                    break;
+                case "Team":
+                    ListTeams.Add(obj);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        public void BuildStaff(int indexPO, int indexTeam, int indexSM)
+        {
+            staff.Clear();
+            staff.Add(ListPO[indexPO]);
+            staff.Add(ListSM[indexSM]);
+            staff.Add(ListTeams[indexTeam]);
+        }
     }
 }

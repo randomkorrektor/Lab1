@@ -48,4 +48,20 @@
   <Responsibility>39</Responsibility>
   <Diplomacy>100</Diplomacy>
  </Name>
+ <Name xmlns="Jess">
+  <Function>Product owner</Function>
+  <Lvl>1</Lvl>
+  <Leadership>38</Leadership>
+  <Programming>81</Programming>
+  <Responsibility>35</Responsibility>
+  <Diplomacy>18</Diplomacy>
+ </Name>
+ <Name xmlns="Tony">
+  <Function>Product owner</Function>
+  <Lvl>1</Lvl>
+  <Leadership>56</Leadership>
+  <Programming>5</Programming>
+  <Responsibility>8</Responsibility>
+  <Diplomacy>80</Diplomacy>
+ </Name>
 </Base>
