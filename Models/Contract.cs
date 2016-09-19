@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.Models
 {
-    class Task
+    class Contract
     {
+        public string name, specification;
+        public int workload, timeLimit;
     }
 }

@@ -39,9 +39,9 @@ namespace WindowsFormsApplication1
             }
             listBox1.Refresh();
             listBoxStaff.Items.Clear();
-            for (int i = 0; i < EmpBase.staff.Count; i++)
+            for (int i = 0; i < EmpBase.staff.employees.Count; i++)
             {
-                listBoxStaff.Items.Add(EmpBase.staff[i].name);
+                listBoxStaff.Items.Add(EmpBase.staff.employees[i].name);
             }
             listBoxStaff.Refresh();
             richTextBox1.Clear();
@@ -172,7 +172,16 @@ namespace WindowsFormsApplication1
                 EmpBase.BuildStaff(comboBoxPO.SelectedIndex, comboBoxTeam.SelectedIndex, comboBoxSM.SelectedIndex);
                 RefrashAll();
             }
+            else
+                MessageBox.Show("State not dialed!");
+
         }
+
+        private void listBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox1.Text = EmpBase.staff.employees[listBoxStaff.SelectedIndex].GetData();
+        }
+
     }
 
 }

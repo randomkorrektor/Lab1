@@ -260,6 +260,7 @@
             this.listBoxStaff.Name = "listBoxStaff";
             this.listBoxStaff.Size = new System.Drawing.Size(92, 95);
             this.listBoxStaff.TabIndex = 22;
+            this.listBoxStaff.SelectedIndexChanged += new System.EventHandler(this.listBoxStaff_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -272,7 +273,7 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Staff";
             // 
-            // FormBase
+            // FormFace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -300,7 +301,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "FormBase";
+            this.Name = "FormFace";
             this.Text = "Base";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

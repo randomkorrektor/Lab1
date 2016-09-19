@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.Models
 {
-    class TaskList
+    class ContractsList
     {
+        public List<Contract> contracts= new List<Contract>();
+
     }
 }
