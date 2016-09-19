@@ -82,7 +82,7 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(176, 23);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Add employees to the current list";
+            this.buttonAdd.Text = "Add positions to the current list";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 

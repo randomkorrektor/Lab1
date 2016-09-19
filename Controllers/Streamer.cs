@@ -70,5 +70,41 @@ namespace WindowsFormsApplication1
             }
             
         }
+
+        public static void WriteContracts(List<Contract> contracts)
+        {
+            XmlWriterSettings sett = new XmlWriterSettings();
+
+            sett.Indent = true;
+            sett.IndentChars = " ";
+            sett.NewLineChars = "\n";
+            XmlWriter output = XmlWriter.Create("BaseContracts.xml", sett);
+            output.WriteStartElement("BaseBaseContracts");
+            for (int i = 0; i < contracts.Count; i++)
+            {
+                output.WriteStartElement("Name", contracts[i].name);
+
+                output.WriteElementString("Specification", contracts[i].specification);
+                output.WriteElementString("Workload", contracts[i].workload.ToString());
+                output.WriteElementString("TimeLimit", contracts[i].timeLimit.ToString());
+                output.WriteEndElement();
+            }
+            output.WriteEndElement();
+            output.Flush();
+            output.Close();
+        }
+
+        public static void ReadContracts(ContractsBase contBase)
+        {
+            XmlDocument Doc = new XmlDocument();
+            Doc.Load("BaseContracts.xml");
+
+            foreach (XmlNode contract in Doc.DocumentElement)
+            {
+                Contract cont = new Contract(contract.Attributes[0].Value, contract["Specification"].InnerText, int.Parse(contract["Workload"].InnerText), int.Parse(contract["TimeLimit"].InnerText));
+                contBase.contracts.Add(cont);
+
+            }
+        }
     }
 }

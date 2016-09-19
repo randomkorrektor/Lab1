@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BaseBaseContracts>
+ <Name xmlns="Kill the hipsters">
+  <Specification>Kill.
+KILL tham!
+KILL THAM ALL!!!!!!!!</Specification>
+  <Workload>490</Workload>
+  <TimeLimit>132</TimeLimit>
+ </Name>
+ <Name xmlns="Programming">
+  <Specification>Just programming...</Specification>
+  <Workload>755</Workload>
+  <TimeLimit>365</TimeLimit>
+ </Name>
+ <Name xmlns="Pilorama">
+  <Specification>Pilit' eli!</Specification>
+  <Workload>1129</Workload>
+  <TimeLimit>159</TimeLimit>
+ </Name>
+</BaseBaseContracts>

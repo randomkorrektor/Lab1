@@ -48,7 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Scrum.cs" />
+    <Compile Include="Models\BackLog.cs" />
     <Compile Include="Models\EmployeesBase.cs" />
+    <Compile Include="Wiews\FormCreateContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wiews\FormCreateContract.Designer.cs">
+      <DependentUpon>FormCreateContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wiews\FormAF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,8 +75,7 @@
       <DependentUpon>FormLeveling.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Contract.cs" />
-    <Compile Include="Models\ContractsList.cs" />
-    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\ContractsBase.cs" />
     <Compile Include="Controllers\Streamer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Wiews\FormFace.cs">
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Wiews\FormCreateContract.resx">
+      <DependentUpon>FormCreateContract.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wiews\FormAF.resx">
       <DependentUpon>FormAF.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApplication1.Models
+namespace WindowsFormsApplication1
 {
     class BackLog
     {
@@ -16,10 +16,10 @@ namespace WindowsFormsApplication1.Models
             this.timeLimit = contract.timeLimit + PO.diplomacy / 5;
         }
 
-        public void CreateSprintBL(BackLog productBL, Staff staf)
+        public void CreateSprintBL(BackLog productBL, EmployeesBase EmpBase)
         {
-            this.timeLimit = staf.sprinttimelimit;
-            this.workload = productBL.workload / (productBL.timeLimit / staf.sprinttimelimit + staf.sprinttimelimit);
+            this.timeLimit = EmpBase.sprinttimelimit;
+            this.workload = productBL.workload / (productBL.timeLimit / EmpBase.sprinttimelimit + EmpBase.sprinttimelimit);
         }
     }
 }

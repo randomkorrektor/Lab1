@@ -31,3 +31,4 @@ D:\Учебные материалы\4 курс\Программирование
 D:\Учебные материалы\4 курс\Программирование\Lab1\obj\Debug\WindowsFormsApplication1.FormQuestion.resources
 D:\Учебные материалы\4 курс\Программирование\Lab1\obj\Debug\WindowsFormsApplication1.FormAF.resources
 D:\Учебные материалы\4 курс\Программирование\Lab1\obj\Debug\WindowsFormsApplication1.FormFace.resources
+D:\Учебные материалы\4 курс\Программирование\Lab1\obj\Debug\WindowsFormsApplication1.FormCreateContract.resources

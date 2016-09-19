@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     public partial class FormFace : Form
     {
         private EmployeesBase EmpBase = new EmployeesBase();
+        private ContractsBase ContBase = new ContractsBase();
 
         public FormFace()
         {
@@ -39,9 +40,9 @@ namespace WindowsFormsApplication1
             }
             listBox1.Refresh();
             listBoxStaff.Items.Clear();
-            for (int i = 0; i < EmpBase.staff.employees.Count; i++)
+            for (int i = 0; i < EmpBase.staff.Count; i++)
             {
-                listBoxStaff.Items.Add(EmpBase.staff.employees[i].name);
+                listBoxStaff.Items.Add(EmpBase.staff[i].name);
             }
             listBoxStaff.Refresh();
             richTextBox1.Clear();
@@ -179,7 +180,99 @@ namespace WindowsFormsApplication1
 
         private void listBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richTextBox1.Text = EmpBase.staff.employees[listBoxStaff.SelectedIndex].GetData();
+            richTextBox1.Text = EmpBase.staff[listBoxStaff.SelectedIndex].GetData();
+        }
+
+        private void buttonNewContrac_Click(object sender, EventArgs e)
+        {
+            var create = new FormCreateContract();
+            create.ShowDialog();
+            ContBase.CreateContract(create.name, create.specification, create.workload, create.timeLimit);
+            listBox2.Items.Add(create.name);
+
+        }
+
+        private void buttonDeleteContract_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedIndex != -1)
+            {
+                ContBase.DeleteContract(listBox2.SelectedIndex);
+                RefrashContractForm();
+            }
+        }
+
+        private void buttonSaveContracts_Click(object sender, EventArgs e)
+        {
+            Streamer.WriteContracts(ContBase.contracts);
+        }
+
+        private void buttonLoadContracts_Click(object sender, EventArgs e)
+        {
+            if (ContBase.contracts.Count > 0)
+            {
+                string mess = "This database includes employees. Clear base?";
+                var warning = new FormQuestion(mess);
+                warning.ShowDialog();
+                switch (warning.reqest)
+                {
+                    case 1:
+                        ContBase.contracts.Clear();
+                        listBox2.Items.Clear();
+                        Streamer.ReadContracts(ContBase);
+                        break;
+                    case 2:
+                        listBox2.Items.Clear();
+                        Streamer.ReadContracts(ContBase);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                Streamer.ReadContracts(ContBase);
+                
+            }
+            RefrashContractForm();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            richTextBox2.Text = ContBase.contracts[listBox2.SelectedIndex].GetData();
+            richTextBox3.Text = ContBase.contracts[listBox2.SelectedIndex].specification;
+        }
+
+        private void RefrashContractForm()
+        {
+            listBox2.Items.Clear();
+            for (int i = 0; i < ContBase.contracts.Count; i++)
+            {
+                listBox2.Items.Add(ContBase.contracts[i].name);
+            }
+            listBox2.Refresh();
+            richTextBox2.Clear();
+            richTextBox3.Clear();
+        }
+
+        private void buttonAccept_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedIndex != -1)
+            {
+                ContBase.acceptID = listBox2.SelectedIndex;
+                textBox1.Text = ContBase.contracts[ContBase.acceptID].name;
+                richTextBox4.Text = ContBase.contracts[ContBase.acceptID].specification;
+            }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (EmpBase.staff.Count > 0 && textBox1.Text != "")
+            {
+                MessageBox.Show("SCRUM!!!");
+            }
+            else
+                MessageBox.Show("Form a staff and select the contract!");
         }
 
     }

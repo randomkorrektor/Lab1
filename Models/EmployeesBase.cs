@@ -13,7 +13,8 @@ namespace WindowsFormsApplication1
         public List<Employee> ListPO = new List<Employee>();
         public List<Employee> ListTeams = new List<Employee>();
         public List<Employee> ListSM = new List<Employee>();
-        public Staff staff = new Staff();
+        public List<Employee> staff = new List<Employee>();
+        public int sprinttimelimit;
         
 
 
@@ -94,10 +95,10 @@ namespace WindowsFormsApplication1
 
         public void BuildStaff(int indexPO, int indexTeam, int indexSM)
         {
-            staff.employees.Clear();
-            staff.employees.Add(ListPO[indexPO]);
-            staff.employees.Add(ListTeams[indexTeam]);
-            staff.employees.Add(ListSM[indexSM]);
+            staff.Clear();
+            staff.Add(ListPO[indexPO]);
+            staff.Add(ListTeams[indexTeam]);
+            staff.Add(ListSM[indexSM]);
         }
     }
 }
