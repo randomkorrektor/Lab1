@@ -68,10 +68,15 @@
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonAccept = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -216,7 +221,7 @@
             // comboBoxPO
             // 
             this.comboBoxPO.FormattingEnabled = true;
-            this.comboBoxPO.Location = new System.Drawing.Point(23, 318);
+            this.comboBoxPO.Location = new System.Drawing.Point(23, 310);
             this.comboBoxPO.Name = "comboBoxPO";
             this.comboBoxPO.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPO.TabIndex = 17;
@@ -227,7 +232,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.AliceBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(20, 299);
+            this.label4.Location = new System.Drawing.Point(20, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
             this.label4.TabIndex = 16;
@@ -236,7 +241,7 @@
             // comboBoxSM
             // 
             this.comboBoxSM.FormattingEnabled = true;
-            this.comboBoxSM.Location = new System.Drawing.Point(23, 368);
+            this.comboBoxSM.Location = new System.Drawing.Point(23, 353);
             this.comboBoxSM.Name = "comboBoxSM";
             this.comboBoxSM.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSM.TabIndex = 19;
@@ -247,7 +252,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.AliceBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(20, 349);
+            this.label5.Location = new System.Drawing.Point(20, 334);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 18;
@@ -259,13 +264,13 @@
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Location = new System.Drawing.Point(12, 236);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 220);
+            this.pictureBox2.Size = new System.Drawing.Size(148, 228);
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
             // buttonStaffIn
             // 
-            this.buttonStaffIn.Location = new System.Drawing.Point(23, 412);
+            this.buttonStaffIn.Location = new System.Drawing.Point(29, 435);
             this.buttonStaffIn.Name = "buttonStaffIn";
             this.buttonStaffIn.Size = new System.Drawing.Size(121, 21);
             this.buttonStaffIn.TabIndex = 21;
@@ -299,7 +304,7 @@
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(178, 236);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(427, 220);
+            this.pictureBox3.Size = new System.Drawing.Size(427, 228);
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             // 
@@ -468,12 +473,61 @@
             this.buttonAccept.UseVisualStyleBackColor = true;
             this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.Color.AliceBlue;
+            this.trackBar1.Location = new System.Drawing.Point(23, 400);
+            this.trackBar1.Maximum = 14;
+            this.trackBar1.Minimum = 1;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(121, 45);
+            this.trackBar1.TabIndex = 42;
+            this.trackBar1.Value = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.AliceBlue;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(20, 378);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 16);
+            this.label12.TabIndex = 43;
+            this.label12.Text = "Sprint length";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.AliceBlue;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(20, 418);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 44;
+            this.label13.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.AliceBlue;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(131, 418);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(19, 13);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "14";
+            // 
             // FormFace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(714, 465);
+            this.ClientSize = new System.Drawing.Size(714, 478);
+            this.Controls.Add(this.buttonStaffIn);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.buttonAccept);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label11);
@@ -494,7 +548,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.buttonStaffIn);
             this.Controls.Add(this.comboBoxSM);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxPO);
@@ -521,6 +574,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,6 +622,10 @@
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonAccept;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }
 

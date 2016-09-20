@@ -8,18 +8,22 @@ namespace WindowsFormsApplication1
 {
     class BackLog
     {
-        public int workload,timeLimit;
+        public int workload, timeLimit, POWorkload, POTime;
+        Random rand = new Random();
+        
 
         public void CreateProductBL(Contract contract, Employee PO)
         {
-            this.workload = contract.workload - PO.leadership - PO.programming;
-            this.timeLimit = contract.timeLimit + PO.diplomacy / 5;
+            POWorkload = PO.leadership + PO.programming + rand.Next(-5, 5);
+            POTime = PO.diplomacy / 5 + rand.Next(-5, 5);
+            this.workload = contract.workload - POWorkload;
+            this.timeLimit = contract.timeLimit + POTime;
         }
 
         public void CreateSprintBL(BackLog productBL, EmployeesBase EmpBase)
         {
             this.timeLimit = EmpBase.sprinttimelimit;
-            this.workload = productBL.workload / (productBL.timeLimit / EmpBase.sprinttimelimit + EmpBase.sprinttimelimit);
+            this.workload = productBL.workload / (productBL.timeLimit / EmpBase.sprinttimelimit + 1);
         }
     }
 }

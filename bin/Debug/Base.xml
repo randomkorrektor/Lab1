@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Base>
+ <Name xmlns="Valera">
+  <Function>Team</Function>
+  <Lvl>1</Lvl>
+  <Leadership>25</Leadership>
+  <Programming>44</Programming>
+  <Responsibility>74</Responsibility>
+  <Diplomacy>2</Diplomacy>
+ </Name>
  <Name xmlns="Alex">
   <Function>Scrum master</Function>
   <Lvl>6</Lvl>
@@ -58,10 +66,18 @@
  </Name>
  <Name xmlns="Tony">
   <Function>Product owner</Function>
-  <Lvl>1</Lvl>
+  <Lvl>2</Lvl>
   <Leadership>56</Leadership>
   <Programming>5</Programming>
   <Responsibility>8</Responsibility>
-  <Diplomacy>80</Diplomacy>
+  <Diplomacy>85</Diplomacy>
+ </Name>
+ <Name xmlns="Chubaka">
+  <Function>Team</Function>
+  <Lvl>2</Lvl>
+  <Leadership>41</Leadership>
+  <Programming>82</Programming>
+  <Responsibility>4</Responsibility>
+  <Diplomacy>23</Diplomacy>
  </Name>
 </Base>

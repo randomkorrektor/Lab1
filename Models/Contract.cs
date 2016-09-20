@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1
 {
-    class Contract
+    public class Contract
+    //Public?
     {
 
         protected string _name, _specification;

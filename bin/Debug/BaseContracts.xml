@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BaseBaseContracts>
+ <Name xmlns="Fly">
+  <Specification>Jump &amp; fly</Specification>
+  <Workload>2641</Workload>
+  <TimeLimit>113</TimeLimit>
+ </Name>
+ <Name xmlns="layer">
+  <Specification>make a-chanal</Specification>
+  <Workload>2065</Workload>
+  <TimeLimit>151</TimeLimit>
+ </Name>
  <Name xmlns="Kill the hipsters">
   <Specification>Kill.
 KILL tham!

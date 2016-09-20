@@ -48,8 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Scrum.cs" />
+    <Compile Include="FormQuestion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestion2.Designer.cs">
+      <DependentUpon>FormQuestion2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BackLog.cs" />
     <Compile Include="Models\EmployeesBase.cs" />
+    <Compile Include="Wiews\FormScrum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wiews\FormScrum.Designer.cs">
+      <DependentUpon>FormScrum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wiews\FormCreateContract.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormQuestion2.resx">
+      <DependentUpon>FormQuestion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wiews\FormScrum.resx">
+      <DependentUpon>FormScrum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wiews\FormCreateContract.resx">
       <DependentUpon>FormCreateContract.cs</DependentUpon>
     </EmbeddedResource>

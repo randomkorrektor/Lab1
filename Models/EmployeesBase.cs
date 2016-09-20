@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1
 {
     
-    class EmployeesBase
+    public class EmployeesBase
+        //Public?
     {
         public List<Employee> employees = new List<Employee>();
         public List<Employee> ListPO = new List<Employee>();
@@ -93,12 +94,13 @@ namespace WindowsFormsApplication1
 
         }
 
-        public void BuildStaff(int indexPO, int indexTeam, int indexSM)
+        public void BuildStaff(int indexPO, int indexTeam, int indexSM, int time)
         {
             staff.Clear();
             staff.Add(ListPO[indexPO]);
             staff.Add(ListTeams[indexTeam]);
             staff.Add(ListSM[indexSM]);
+            sprinttimelimit = time;
         }
     }
 }

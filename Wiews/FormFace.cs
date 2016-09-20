@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1
         {
             if (comboBoxPO.Text != "" && comboBoxSM.Text != "" && comboBoxTeam.Text != "")
             {
-                EmpBase.BuildStaff(comboBoxPO.SelectedIndex, comboBoxTeam.SelectedIndex, comboBoxSM.SelectedIndex);
+                EmpBase.BuildStaff(comboBoxPO.SelectedIndex, comboBoxTeam.SelectedIndex, comboBoxSM.SelectedIndex, trackBar1.Value);
                 RefrashAll();
             }
             else
@@ -269,7 +269,11 @@ namespace WindowsFormsApplication1
         {
             if (EmpBase.staff.Count > 0 && textBox1.Text != "")
             {
-                MessageBox.Show("SCRUM!!!");
+                FormScrum formScrum = new FormScrum(EmpBase, ContBase.contracts[ContBase.acceptID]);
+                formScrum.ShowDialog();
+                if (formScrum.end)
+                    ContBase.DeleteContract(ContBase.acceptID);
+                RefrashContractForm();
             }
             else
                 MessageBox.Show("Form a staff and select the contract!");
